@@ -8,10 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.moodcalendar4.model.MockMoodRecordRepository;
-import com.example.moodcalendar4.model.MoodRecord;
-import com.example.moodcalendar4.model.MoodRecordRepository;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         // (Вертикальный список. есть ещё горизонтальный список и галерея)
         moodList.setLayoutManager(new LinearLayoutManager(this));
 
-        MainController mainController = new MainController(tvDisplayDate, moodList);
+        MainController mainController = new MainController(tvDisplayDate, moodList, new MockMoodRecordRepository());
         mainController.start();
     }
 }
