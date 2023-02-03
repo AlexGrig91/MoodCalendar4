@@ -25,18 +25,8 @@ public class MainActivity extends AppCompatActivity {
         //установили лайаут менеджер для указания способа отображения элементов в списке
         // (Вертикальный список. есть ещё горизонтальный список и галерея)
         moodList.setLayoutManager(new LinearLayoutManager(this));
-        // создали адаптер.Адаптер это то что контролирует отображение списка на ресайклере
-        MoodAdapter adapter = new MoodAdapter();
-        // превязали адаптер к ресайклеру
-        moodList.setAdapter(adapter);
-        //временная мера получаем список потом будет заменено
-        MoodRecordRepository repository = new MockMoodRecordRepository();
-        List<MoodRecord> records = repository.getAll();
-        //передаём в адаптер список записей
-        adapter.submitList(records);
 
-
-        MainController mainController = new MainController(tvDisplayDate);
+        MainController mainController = new MainController(tvDisplayDate, moodList);
         mainController.start();
     }
 }

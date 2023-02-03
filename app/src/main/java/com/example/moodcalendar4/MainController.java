@@ -1,26 +1,56 @@
 package com.example.moodcalendar4;
 
+import android.widget.Adapter;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.moodcalendar4.model.MockMoodRecordRepository;
+import com.example.moodcalendar4.model.MoodRecord;
+import com.example.moodcalendar4.model.MoodRecordRepository;
+
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 public class MainController {
-    TextView tvDisplayDate;
+    //
+    TextView tvDisplayDate = null;
+    RecyclerView moodList = null;
 
-    public MainController(TextView tvDisplayDate) {
+    // создали адаптер.Адаптер это то что контролирует отображение списка на ресайклере
+    MoodAdapter adapter = new MoodAdapter();
+
+    //в строчке 17 и 18 были нуллы а стали теперь теми кем были в маин активити мы их закинули как
+    //аргумент конструктора
+    public MainController(TextView tvDisplayDate, RecyclerView moodList) {
         this.tvDisplayDate = tvDisplayDate;
+        this.moodList = moodList;
+
+        // превязали адаптер к ресайклеру
+        moodList.setAdapter(adapter);
     }
+
+
+    //public MoodAdapter adapter = new MoodAdapter();
 
     public void start() {
         setDate();
+        setRecycler();
     }
 
     private void setDate() {
         long date = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("d MMMM");
         String dateString = sdf.format(date);
-
         tvDisplayDate.setText(dateString);
+    }
+
+    private void setRecycler(){
+        //временная мера получаем список потом будет заменено
+        MoodRecordRepository repository = new MockMoodRecordRepository();
+        List<MoodRecord> records = repository.getAll();
+        //передаём в адаптер список записей
+        adapter.submitList(records);
     }
 
 
