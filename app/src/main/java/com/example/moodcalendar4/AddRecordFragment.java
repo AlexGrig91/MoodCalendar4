@@ -15,6 +15,7 @@ public class AddRecordFragment extends DialogFragment {
 
     @Nullable
     @Override
+    // Аналог метода onCreateViewHolder()
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View dialogView = inflater.inflate(R.layout.dialog_create_record, null);
         dialogView.findViewById(R.id.button_cancel).setOnClickListener(
