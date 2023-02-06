@@ -1,14 +1,13 @@
 package com.example.moodcalendar4;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.moodcalendar4.addRecord.AddRecordFragment;
 import com.example.moodcalendar4.model.MockMoodRecordRepository;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

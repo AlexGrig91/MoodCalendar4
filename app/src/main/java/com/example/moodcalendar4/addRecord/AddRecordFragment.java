@@ -1,4 +1,4 @@
-package com.example.moodcalendar4;
+package com.example.moodcalendar4.addRecord;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,6 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.moodcalendar4.MainController;
+import com.example.moodcalendar4.R;
+import com.example.moodcalendar4.model.MockMoodRecordRepository;
+
 public class AddRecordFragment extends DialogFragment {
 
     @Nullable
@@ -19,6 +23,9 @@ public class AddRecordFragment extends DialogFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View dialogView = inflater.inflate(R.layout.dialog_create_record, null);
         dialogView.findViewById(R.id.button_cancel).setOnClickListener(
+                button -> dismiss()
+        );
+        dialogView.findViewById(R.id.button_save).setOnClickListener(
                 button -> dismiss()
         );
         return dialogView;
