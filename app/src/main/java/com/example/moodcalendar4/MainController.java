@@ -13,7 +13,7 @@ import java.util.List;
 public class MainController {
     //
     TextView tvDisplayDate = null;
-    RecyclerView moodList = null;
+    RecyclerView rvMoodList = null;
     MoodRecordRepository repository = null;
 
     // создали адаптер.Адаптер это то что контролирует отображение списка на ресайклере
@@ -23,7 +23,7 @@ public class MainController {
     //аргумент конструктора
     public MainController(TextView tvDisplayDate, RecyclerView moodList, MoodRecordRepository repository) {
         this.tvDisplayDate = tvDisplayDate;
-        this.moodList = moodList;
+        this.rvMoodList = moodList;
         this.repository = repository;
 
         // превязали адаптер к ресайклеру

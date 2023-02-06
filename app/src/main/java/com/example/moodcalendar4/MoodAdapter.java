@@ -43,7 +43,7 @@ class MoodAdapter extends ListAdapter<MoodRecord, MoodAdapter.MoodViewHolder> {
         // получаем раздуватель или инфлэйтер
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         // преобразуем икс эм эль описание элеиента во вьюху
-        View moodView = inflater.inflate(R.layout.mood_item, parent, false);
+        View moodView = inflater.inflate(R.layout.item_mood, parent, false);
         return new MoodViewHolder(moodView);
     }
 

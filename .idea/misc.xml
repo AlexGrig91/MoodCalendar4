@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/nycke/AndroidStudioProjects/MoodCalendar4/app/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/nycke/AndroidStudioProjects/MoodCalendar4/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/nycke/AndroidStudioProjects/MoodCalendar4/app/src/main/res/layout/dialog_create_record.xml" value="0.223731884057971" />
+        <entry key="..\:/Users/nycke/AndroidStudioProjects/MoodCalendar4/app/src/main/res/layout/item_mood.xml" value="0.223731884057971" />
         <entry key="..\:/Users/nycke/AndroidStudioProjects/MoodCalendar4/app/src/main/res/layout/mood_item.xml" value="0.22" />
       </map>
     </option>
