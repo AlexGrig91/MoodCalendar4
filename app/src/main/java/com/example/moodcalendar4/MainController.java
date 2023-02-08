@@ -27,7 +27,10 @@ public class MainController {
         this.repository = repository;
 
         // превязали адаптер к ресайклеру
-        moodList.setAdapter(adapter);
+        rvMoodList.setAdapter(adapter);
+        this.repository.onListUpdate(() -> setRecycler());
+
+
     }
 
 

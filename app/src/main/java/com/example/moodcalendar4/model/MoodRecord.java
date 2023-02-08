@@ -23,11 +23,3 @@ public class MoodRecord {
         return rate;
     }
 }
-
-enum MoodRate {
-    NEGATIVE,
-    SEMI_NEGATIVE,
-    NORMAL,
-    SEMI_POSITIVE,
-    POSITIVE
-}
